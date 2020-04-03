@@ -47,3 +47,30 @@ nSTs0K1Z/OHo2/GH7zXc4pt5cCBhh8QZdc5uMR29W7ENUPe6iwbtR1P5nd/71ois
 Z5mJaTsrV6HQhWP2T1P0nbfLLfe6LzqfUH2Bs4ho6Fvujh9U2ag7fKs=
 -----END RSA PRIVATE KEY-----
 ```
+```
+[root@master RBAC]# openssl req -new -key user1.key -out user1.csr -subj "/CN=user1/0=finance"
+Subject Attribute 0 has no known NID, skipped
+[root@master RBAC]# ls
+user1.csr  user1.key
+```
+```
+[root@master RBAC]# cd /etc/kubernetes/pki
+[root@master pki]# ls
+apiserver.crt              apiserver.key                 ca.crt  front-proxy-ca.crt      front-proxy-client.key
+apiserver-etcd-client.crt  apiserver-kubelet-client.crt  ca.key  front-proxy-ca.key      sa.key
+apiserver-etcd-client.key  apiserver-kubelet-client.key  etcd    front-proxy-client.crt  sa.pub
+[root@master pki]# 
+```
+```
+[root@master pki]# cp ca.crt /root/RBAC
+[root@master pki]# cp ca.key /root/RBAC
+```
+```
+[root@master RBAC]# ls
+ca.crt  ca.key  user1.csr  user1.key
+[root@master RBAC]# 
+```
+
+
+
+
