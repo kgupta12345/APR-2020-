@@ -1,4 +1,8 @@
 ```
+[root@master RBAC]# mkdir RBAC
+[root@master RBAC]# cd RBAC
+```
+```
 [root@master RBAC]# kubectl create namespace finance
 namespace/finance created
 ```
