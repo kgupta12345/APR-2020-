@@ -135,13 +135,48 @@ Change current-context from "" to current-context: "user1-kubernetes"
 ```
 [root@master RBAC]# cp user1.kubeconfig ~/.kube/config
 cp: overwrite ‘/root/.kube/config’? no 
+```
+###### [above] We chose 'No' because I am using one machine for both 'user1' and 'admin'
+```
 [root@master RBAC]# kubectl --kubeconfig user1.kubeconfig get pods
+Error from server (Forbidden): pods is forbidden: User "user1" cannot list resource "pods" in API group "" in the namespace "finance"
+[root@master RBAC]# 
+```
+<hr>
+### Authorizaation:
+
+##### Create a Role:
+```
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: "2020-04-03T21:31:21Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:rules: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-04-03T21:31:21Z"
+  name: user1-role-finance
+  namespace: finance
+  resourceVersion: "8732"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/finance/roles/user1-role-finance
+  uid: ed60223d-994f-4400-8237-027b386ba301
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+  - list
 
 ```
-###### Reason: We chose 'No' because I am using one machine for user1 and admin
-
-
-
-
+ OR
+```
+kubectl -n finance get role user1-role-finance -o yaml
+```
 
 
