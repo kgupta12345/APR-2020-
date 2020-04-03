@@ -218,5 +218,10 @@ OR
 kubectl create rolebinding user1-rolebinding-finance --role=user1-role-finance --user=user1 --namespace finance
 ```
 
-
+#### TRY:
+```
+[root@master RBAC]# kubectl --kubeconfig user1.kubeconfig get pods
+No resources found in finance namespace.
+[root@master RBAC]# 
+```
 
