@@ -106,6 +106,9 @@ users:
 [root@master ~]# 
 
 ```
+
+###### From above we see a couple of generated files - ca.crt, ca.key, ca.srl, user1.crt, user1.csr, user1.key; out of which we need to share (ca.crt, user1.crt, user1.key) to user1 to setup his kubeconfig to access this K8 Cluster.
+
 ```
 [root@master ~]# kubectl --kubeconfig user1.kubeconfig config set-cluster kubernetes --server https://192.168.152.169:6443 --certificate-authority=ca.crt
 Cluster "kubernetes" set.
@@ -116,9 +119,22 @@ Cluster "kubernetes" set.
 User "user1" set.
 [root@master RBAC]# kubectl --kubeconfig user1.kubeconfig config set-context user1-kubernetes --cluster kubernetes --namespace finance --user user1
 Context "user1-kubernetes" created.
+[root@master RBAC]# ls
+ca.crt  ca.key  ca.srl  user1.crt  user1.csr  user1.key  user1.kubeconfig
 [root@master RBAC]# 
 ```
+```
+[root@master RBAC]# sudo gedit user1.kubeconfig
+Change current-context from "" to current-context: "user1-kubernetes"
 
+```
+```
+[root@master RBAC]# cp user1.kubeconfig ~/.kube/config
+cp: overwrite ‘/root/.kube/config’? no 
+[root@master RBAC]# kubectl --kubeconfig user1.kubeconfig get pods
+
+```
+###### Reason: We chose 'No' because I am using one machine for user1 and admin
 
 
 
