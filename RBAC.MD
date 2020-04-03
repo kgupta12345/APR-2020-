@@ -79,7 +79,49 @@ Getting CA Private Key
 [root@master RBAC]# ls
 ca.crt  ca.key  ca.srl  user1.crt  user1.csr  user1.key
 [root@master RBAC]# 
+```
+```
+[root@master ~]# bash
+[root@master ~]# kubectl config view
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: DATA+OMITTED
+    server: https://192.168.152.169:6443
+  name: kubernetes
+contexts:
+- context:
+    cluster: kubernetes
+    namespace: mynamespace
+    user: kubernetes-admin
+  name: kubernetes-admin@kubernetes
+current-context: kubernetes-admin@kubernetes
+kind: Config
+preferences: {}
+users:
+- name: kubernetes-admin
+  user:
+    client-certificate-data: REDACTED
+    client-key-data: REDACTED
+[root@master ~]# 
 
 ```
+```
+[root@master ~]# kubectl --kubeconfig user1.kubeconfig config set-cluster kubernetes --server https://192.168.152.169:6443 --certificate-authority=ca.crt
+Cluster "kubernetes" set.
+[root@master ~]# 
+```
+```
+[root@master RBAC]# kubectl --kubeconfig user1.kubeconfig config set-credentials user1 --client-certificate user1.crt --client-key user1.key
+User "user1" set.
+[root@master RBAC]# kubectl --kubeconfig user1.kubeconfig config set-context user1-kubernetes --cluster kubernetes --namespace finance --user user1
+Context "user1-kubernetes" created.
+[root@master RBAC]# 
+```
+
+
+
+
+
 
 
