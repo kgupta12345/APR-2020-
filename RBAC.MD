@@ -1,0 +1,49 @@
+```
+[root@master RBAC]# kubectl create namespace finance
+namespace/finance created
+```
+```
+[root@master RBAC]# kubectl get ns
+NAME              STATUS   AGE
+default           Active   15d
+finance           Active   9s
+kube-node-lease   Active   15d
+kube-public       Active   15d
+kube-system       Active   15d
+mynamespace       Active   43m
+```
+```
+[root@master RBAC]# openssl genrsa -out user1.key 2048
+Generating RSA private key, 2048 bit long modulus
+.............................................+++
+................................+++
+e is 65537 (0x10001)
+[root@master RBAC]# cat user1.key
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEAot+uySMlgu/n89MijMrwi9Q/tmwqygPK+y42PL3zwtk02z74
+eNePlPVnVTmnTGysOSuk36H6VyP3Jp1bowqKCS0Rinmv64NWdaUnd3b6ardlD6E5
+NJgrt3zhJ8xIaplpI5sXQ92xGhz8B/DuJZ6n4cnDhnbuwu85XckkKQ2rKEPcBQeq
+GB7EZSICosMjphm+ZslB43bxEWoogq/ZwIP4DyOX0QGYmVNCPcY94XECHE+4mJUQ
+4smhsi362S1bSYQRQ4wYbUWt+Uc+zY7RuOaM6PEfmZCmM4xLNj7rbIkESTnXd54B
+O28nVhcib2TUB5zkt/5m3dtdVNYjU3+v4VTAwwIDAQABAoIBAQCGcLyFqk08V2rP
+CGhsbtc/lGNC4OYw+hCCZRK/8MtU+pV2o/PVS5lpC2fQIVbG7qz6Q9xD/B/37egE
+J7+MRRbLnDfuZaOgczjawwhgxATQMbFpxVrC3xi2zI3NnAHqe9cdXNdHXabiNyqS
+I31v8BYDede7FlDe9zgTAgSnHnE5Ofip0u8UxS5WINJQ504+ZptXF7xR6gMmzKIo
+IRasA+BFnOj0p1SgUS8GTZmK4N/UWJF36LVR8/XaP5hZFtb46Q13mpbDVP0Bnf0H
+pg9zZh7b1gAP68P1bFRZAqvVLSSObeV17kwMI8JnqXjaFmxX8zZi7UmRnfFsRDFI
+qhwFRxiBAoGBANhMWdoxtixaq5FdZbhZmQhI7Rf/1CfHd69CBiJAumM2MNC8gnWM
+Ah4VETaZWnVYO6Fg4ZE5J20anmPBKMTLUGXjrBM4fieX25l6XUmYz3G0B2MOczsy
+je83uCnirTfIeOjz/dwwYky7611U7MDFreb1ZnB24IECzPZcfuoeguXvAoGBAMDE
+90qZ6frfwxqka5URWDt3MRoriYxoibbdJ7dJJTeE1v8HF+PxgFDyvJnUfojhMJvL
+1OcxgIzPpD+szl/AJsRvDl305ObQJI3AD2zl6b2vx3S8RnA5BeKEvWakA6fgctlL
+k7e72dPPMUt8Em6n7UHzytxvukJqKb7jCRRIXsZtAoGBAIK+zEV/bS4sdK7+9ODV
+kBKY+nBaXSTahvcygsCrvb8A38sdWAKz6gfDFk+ZrTtnZUwsYs1E7hceUwXbmcgz
+WdrtH3PS3zcRrVV9yOwW6bZCa4CuGGt9KJykYrc25RvmG2g9LIOv34ugwCn/jskL
+9Q254v0yboytY7W7vZ/JZ7iTAoGABcbhUk8CgA4snqPGxZTbfAy6X/pmCNspJV3D
+Tu7WOq+0cbgYszANlF9x33pKwHdfKYwWOUd2fsHKPk5DcQMlJkXdvFsWcQRT1Bup
+Wq4ZLyIRbCIoSjyrPHqV4nmP0nwbdP+a0arDgGF5LLXvJ3nI1m0j6y89+beMwLe1
+EfKJRJECgYEAnEXaSiGQc9csq+/hJqLSVJ5Xu4haHEZFarOZ0Jv2c0Aj0aXwnMvi
+nSTs0K1Z/OHo2/GH7zXc4pt5cCBhh8QZdc5uMR29W7ENUPe6iwbtR1P5nd/71ois
+Z5mJaTsrV6HQhWP2T1P0nbfLLfe6LzqfUH2Bs4ho6Fvujh9U2ag7fKs=
+-----END RSA PRIVATE KEY-----
+```
