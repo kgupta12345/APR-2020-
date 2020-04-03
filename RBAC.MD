@@ -52,7 +52,7 @@ Z5mJaTsrV6HQhWP2T1P0nbfLLfe6LzqfUH2Bs4ho6Fvujh9U2ag7fKs=
 -----END RSA PRIVATE KEY-----
 ```
 ```
-[root@master RBAC]# openssl req -new -key user1.key -out user1.csr -subj "/CN=user1/0=finance"
+[root@master RBAC]# openssl req -new -key user1.key -out user1.csr -subj "/CN=user1/O=finance"
 Subject Attribute 0 has no known NID, skipped
 [root@master RBAC]# ls
 user1.csr  user1.key
