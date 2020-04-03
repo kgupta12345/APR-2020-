@@ -71,6 +71,15 @@ ca.crt  ca.key  user1.csr  user1.key
 [root@master RBAC]# 
 ```
 
+```
+[root@master RBAC]# openssl x509 -req -in user1.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out user1.crt -days 365
+Signature ok
+subject=/CN=user1
+Getting CA Private Key
+[root@master RBAC]# ls
+ca.crt  ca.key  ca.srl  user1.crt  user1.csr  user1.key
+[root@master RBAC]# 
 
+```
 
 
