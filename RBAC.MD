@@ -178,5 +178,45 @@ rules:
 ```
 kubectl -n finance get role user1-role-finance -o yaml
 ```
+##### Now create RoleBinding:
+```
+[root@master RBAC]# kubectl -n finance get rolebinding user1-rolebinding-finance -o yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2020-04-03T21:37:29Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-04-03T21:37:29Z"
+  name: user1-rolebinding-finance
+  namespace: finance
+  resourceVersion: "9571"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/finance/rolebindings/user1-rolebinding-finance
+  uid: 80f309ab-614b-413b-9f12-99e774a0ebd3
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: user1-role-finance
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: user1
+[root@master RBAC]# 
+
+```
+OR
+```
+kubectl create rolebinding user1-rolebinding-finance --role=user1-role-finance --user=user1 --namespace finance
+```
+
 
 
