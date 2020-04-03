@@ -114,9 +114,9 @@ users:
 ###### From above we see a couple of generated files - ca.crt, ca.key, ca.srl, user1.crt, user1.csr, user1.key; out of which we need to share (ca.crt, user1.crt, user1.key) to user1 to setup his kubeconfig to access this K8 Cluster.
 
 ```
-[root@master ~]# kubectl --kubeconfig user1.kubeconfig config set-cluster kubernetes --server https://192.168.152.169:6443 --certificate-authority=ca.crt
+[root@master RBAC]#  kubectl --kubeconfig user1.kubeconfig config set-cluster kubernetes --server https://192.168.152.169:6443 --certificate-authority=ca.crt
 Cluster "kubernetes" set.
-[root@master ~]# 
+[root@master RBAC]#  
 ```
 ```
 [root@master RBAC]# kubectl --kubeconfig user1.kubeconfig config set-credentials user1 --client-certificate user1.crt --client-key user1.key
