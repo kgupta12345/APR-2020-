@@ -225,3 +225,36 @@ No resources found in finance namespace.
 [root@master RBAC]# 
 ```
 
+```
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: "2020-04-03T21:31:21Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:rules: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-04-03T21:31:21Z"
+  name: user1-role-finance
+  namespace: finance
+  resourceVersion: "8732"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/finance/roles/user1-role-finance
+  uid: ed60223d-994f-4400-8237-027b386ba301
+rules:
+- apiGroups:
+  - "*"
+  resources:
+  - "*"
+  verbs:
+  - "*"
+
+```
+##### If you want to add one more guy in this cluster, follow all the steps above with replacing 'user1' with 'user2'. and make the below changes -
+ - kubectl -n finance delete rolebinding user1-rolebinding-finance
+ - kubectl create rolebinding genic-rolebinding-finance --role=user1-role-finance --group=finance --namespace finance
+(Where --group=finance refer/comes from above -subj "/CN=user2/O=finance")
+
