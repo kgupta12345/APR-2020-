@@ -26,3 +26,4 @@ http://<your_ip>:8080
 ###### Configure Github Credentails:
 ![image](https://user-images.githubusercontent.com/45539698/78455512-78c00200-76bc-11ea-9ce3-a62660393241.png)
 ###### Configure Github Credentails and Repo in the Multibranch Pipeline:
+![image](https://user-images.githubusercontent.com/45539698/78455682-701bfb80-76bd-11ea-93bf-6ab3b65cda8a.png)
