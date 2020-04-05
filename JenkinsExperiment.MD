@@ -42,4 +42,8 @@ http://<your_ip>:8080
 [5] Pipeline
 [6] Pipeline: GitHub
 [7] Pipeline: Multibranch with defaults
+[8] JUnit Attachments Plugin
+[9] docker-build-step
+[10] Docker
+[11] Docker API
 ```
