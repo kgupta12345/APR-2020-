@@ -30,4 +30,7 @@ http://<your_ip>:8080
 #### Set JDK | Maven configurations on Global Level:
 ![image](https://user-images.githubusercontent.com/45539698/78469007-78664c00-773a-11ea-9137-563f48052083.png)
 ![image](https://user-images.githubusercontent.com/45539698/78469017-8f0ca300-773a-11ea-9cc4-9717be6baa9f.png)
-
+#### Set Webhook on Jenkins:
+![image](https://user-images.githubusercontent.com/45539698/78473469-92b22100-775e-11ea-8ddd-2f7c5e1d9db9.png)
+![image](https://user-images.githubusercontent.com/45539698/78473519-e45aab80-775e-11ea-8b2e-e65af4d5c222.png)
+####
