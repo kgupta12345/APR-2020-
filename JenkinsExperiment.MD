@@ -34,3 +34,12 @@ http://<your_ip>:8080
 ![image](https://user-images.githubusercontent.com/45539698/78473469-92b22100-775e-11ea-8ddd-2f7c5e1d9db9.png)
 ![image](https://user-images.githubusercontent.com/45539698/78473519-e45aab80-775e-11ea-8b2e-e65af4d5c222.png)
 ### Add Pluggins on Jenkins:
+```
+[1] GitHub Integration Plugin
+[2] GitHub Authentication plugin
+[3] Maven Integration plugin
+[4] Pipeline Maven Integration Plugin
+[5] Pipeline
+[6] Pipeline: GitHub
+[7] Pipeline: Multibranch with defaults
+```
