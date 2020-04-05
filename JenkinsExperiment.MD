@@ -27,24 +27,4 @@ http://<your_ip>:8080
 ![image](https://user-images.githubusercontent.com/45539698/78455512-78c00200-76bc-11ea-9ce3-a62660393241.png)
 ###### Configure Github Credentails and Repo in the Multibranch Pipeline:
 ![image](https://user-images.githubusercontent.com/45539698/78455682-701bfb80-76bd-11ea-93bf-6ab3b65cda8a.png)
-```
-stage('Build Docker Image') {
-      // build docker image
-      sh "whoami"
-      sh "ls -all /var/run/docker.sock"
-      sh "mv ./target/hello*.jar ./data" 
-      
-      dockerImage = docker.build("hello-world-java")
-    }
-   
-    stage('Deploy Docker Image'){
-      
-      // deploy docker image to nexus
 
-      echo "Docker Image Tag Name: ${dockerImageTag}"
-
-      sh "docker login -u admin -p admin123 ${dockerRepoUrl}"
-      sh "docker tag ${dockerImageName} ${dockerImageTag}"
-      sh "docker push ${dockerImageTag}"
-    }
-```
