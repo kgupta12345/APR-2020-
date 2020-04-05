@@ -1,6 +1,6 @@
 ### Jenkins Pipeline:
 
-##### SetUp Jenkins on Ubuntu:
+#### SetUp Jenkins on Ubuntu:
 ```
 sudo apt update
 sudo apt install openjdk-8-jdk
@@ -19,12 +19,12 @@ http://<your_ip>:8080
 ![image](https://user-images.githubusercontent.com/45539698/78455259-da7f6c80-76ba-11ea-8dd2-16c501facfaa.png)
 ![image](https://user-images.githubusercontent.com/45539698/78455275-f3881d80-76ba-11ea-8556-8ed1e305c4f2.png)
 ![image](https://user-images.githubusercontent.com/45539698/78455311-334f0500-76bb-11ea-8061-17bebf22de1a.png)
-##### Click on New Item:
+#### Click on New Item:
 ![image](https://user-images.githubusercontent.com/45539698/78455387-bb350f00-76bb-11ea-96f6-656eb9c2bbec.png)
-###### Create a Multibranch Pipeline:
+#### Create a Multibranch Pipeline:
 ![image](https://user-images.githubusercontent.com/45539698/78455496-5fb75100-76bc-11ea-8642-a01b1e9a3f1d.png)
-###### Configure Github Credentails:
+#### Configure Github Credentails:
 ![image](https://user-images.githubusercontent.com/45539698/78455512-78c00200-76bc-11ea-9ce3-a62660393241.png)
-###### Configure Github Credentails and Repo in the Multibranch Pipeline:
+#### Configure Github Credentails and Repo in the Multibranch Pipeline:
 ![image](https://user-images.githubusercontent.com/45539698/78455682-701bfb80-76bd-11ea-93bf-6ab3b65cda8a.png)
 
