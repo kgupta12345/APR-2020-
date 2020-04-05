@@ -25,6 +25,9 @@ http://<your_ip>:8080
 ![image](https://user-images.githubusercontent.com/45539698/78455496-5fb75100-76bc-11ea-8642-a01b1e9a3f1d.png)
 #### Configure Github Credentails:
 ![image](https://user-images.githubusercontent.com/45539698/78455512-78c00200-76bc-11ea-9ce3-a62660393241.png)
-#### Configure Github Credentails and Repo in the Multibranch Pipeline:
+#### Use this Github Credentails in the Multibranch Pipeline:
 ![image](https://user-images.githubusercontent.com/45539698/78455682-701bfb80-76bd-11ea-93bf-6ab3b65cda8a.png)
+#### Set JDK | Maven configurations on Global Level:
+![image](https://user-images.githubusercontent.com/45539698/78469007-78664c00-773a-11ea-9137-563f48052083.png)
+![image](https://user-images.githubusercontent.com/45539698/78469017-8f0ca300-773a-11ea-9cc4-9717be6baa9f.png)
 
