@@ -12,7 +12,7 @@
 </br>
 </br>
 </br>
-#### STEP#3: Configure port in Run Configurations Window :
+#### STEP#3: Configure port in the Run Configurations Window :
 ![image](https://user-images.githubusercontent.com/45539698/80560390-5a6cce00-89fe-11ea-92d4-1ab38193dd29.png)
 </br>
 </br>
@@ -25,3 +25,8 @@
 </br>
 </br>
 ![image](https://user-images.githubusercontent.com/45539698/80563414-ba687200-8a08-11ea-907c-b42ac88618b4.png)
+</br>
+</br>
+</br>
+</br>
+![image](https://user-images.githubusercontent.com/45539698/80563762-9ce7d800-8a09-11ea-90a5-b1ed5d9a20e3.png)
